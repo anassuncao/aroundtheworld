@@ -1,0 +1,29 @@
+/*---------------Nav bar-----------------*/
+
+.nav-wrapper {
+    padding: 0px 20px;
+    background-color: #fff;
+}
+
+.nav-wrapper a {
+    color: #54595c;
+}
+
+
+/*-----Cards------*/
+
+.card {
+    float: left;
+}
+
+
+/*---------------Footer-----------------*/
+
+footer {
+    background-color: #54595c;
+    color: #fff;
+}
+
+#form {
+    padding: 30px;
+}

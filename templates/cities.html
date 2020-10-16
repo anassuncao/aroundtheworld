@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+            
+{% for city in cities %}
+<div class="row container">
+    <div class="col l4 s12">
+        <div class="card small">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img src={{city.img_link}}>
+            </div>
+            <div class="card-content">
+                <span class="card-title grey-text text-darken-4"><strong>{{city.city_name}}</strong> - {{city.country_name}}</span>
+                <p><a class="activator" href="#">Know more</a></p>
+            </div>
+            <div class="card-reveal" id="">
+                <span class="card-title grey-text text-darken-4">{{city.city_name}}<i class="material-icons right">X</i></span>
+                <p>Country: {{city.country_name}}</p>
+                <p>The best: {{city.best}}</p>
+                <p>The worst: {{city.worst}}</p>
+                <p>Where to grab a bite: {{city.eat}}</p>
+                <p>Resting is important: {{city.sleep}}</p>
+                <p>Funny usefull/less stuff: {{city.other}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}
