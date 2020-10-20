@@ -21,6 +21,19 @@ mongo = PyMongo(app)
 def get_cities():
     return render_template("cities.html", cities=mongo.db.cities.find())
 
+
+@app.route('/add_city')
+def add_city():
+    return render_template('addcity.html')
+
+
+@app.route('/insert_city', methods=['POST'])
+def insert_city():
+    cities = mongo.db.cities
+    cities.insert_one(request.form.to_dict())
+    return redirect(url_for('get_cities'))
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get('IP'),
         port=int(os.environ.get('PORT')),
