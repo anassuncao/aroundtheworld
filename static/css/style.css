@@ -12,8 +12,17 @@
 
 /*-----Cards------*/
 
-.card {
+.card-align {
     float: left;
+}
+
+.btn-small {
+    height: 38px;
+    width: 80px;
+    margin-top: 15px;
+    text-align: top;
+    padding: 0px 0px;
+    
 }
 
 
