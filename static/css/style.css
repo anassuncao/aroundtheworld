@@ -1,4 +1,26 @@
-/*---------------Nav bar-----------------*/
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,500;1,200;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+/*
+font-family: 'IBM Plex Sans', sans-serif;
+font-family: 'Abel', sans-serif;
+font-family: 'Architects Daughter', cursive;
+*/
+
+/*--------------------Nav bar------------------------*/
+
+nav {
+     height: 100px!important;
+}
+
+#logo{
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100px;
+    width: 206px;
+    margin-left: 30px;
+}
 
 .nav-wrapper {
     padding: 0px 20px;
@@ -9,24 +31,73 @@
     color: #54595c;
 }
 
+.nav-items {
+    font-size: 24px;
+    vertical-align: baseline;
+    margin-top: 20px;
+    margin-right: 30px;
+}
 
-/*-----Cards------*/
+/*--------------------body------------------------*/
+
+.tittle {
+    font-family: 'Abel', sans-serif;
+    text-align: center;
+    margin-top: 55px;
+}
+
+.intro-questions {
+    
+    color: #54595c;
+    font-family: 'Abel', sans-serif;
+    text-align: center;
+}
+
+.intro-text {
+    color: #54595c;
+    font-family: 'Abel', sans-serif;
+    text-align: center;
+}
+
+.intro-text, h6 {
+    line-height: 18px;
+    font-size: 18px;
+}
+
+.intro-text h5 {
+    margin-top: 30px;
+}
+
+
+/*--------------------Cards------------------------*/
 
 .card-align {
     float: left;
 }
 
 .btn-small {
-    height: 38px;
-    width: 80px;
+    height: 40px;
+    width: 90px;
     margin-top: 15px;
-    text-align: top;
+    text-align: baseline;
     padding: 0px 0px;
+    margin-right: 20px;
     
 }
 
+.card-title {
+    font-family: 'IBM Plex Sans', sans-serif;
+}
 
-/*---------------Footer-----------------*/
+/*--------------------Map------------------------*/
+
+#map {
+    min-height: 400px;
+}
+
+
+
+/*--------------------Footer------------------------*/
 
 footer {
     background-color: #54595c;
@@ -35,4 +106,22 @@ footer {
 
 #form {
     padding: 30px;
+}
+
+
+/*--------------------Add a city------------------------*/
+
+.add-tittle {
+    font-family: 'Abel', sans-serif;
+    text-align: center;
+    margin-top: 55px;
+}
+
+.form-add {
+    font-family: 'Abel', sans-serif;
+    text-align: center;
+}
+
+.button-add {
+    text-align: center;
 }

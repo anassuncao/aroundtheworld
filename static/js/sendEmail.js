@@ -11,7 +11,7 @@ function sendMail(contactForm) {
         },
         function(error) {
             console.log("FAIL", error);
-            alert("Failed!" + error);
+            alert("Failed to send email!" + error);
         }
     );
     return false; 

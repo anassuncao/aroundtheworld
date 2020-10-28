@@ -39,6 +39,7 @@ def edit_city(city_id):
     the_city = mongo.db.cities.find_one({'_id': ObjectId(city_id)})
     return render_template('editcity.html', city=the_city)
 
+
 @app.route('/update_city/<city_id>', methods=['POST'])
 def update_city(city_id):
     cities = mongo.db.cities
@@ -53,6 +54,12 @@ def update_city(city_id):
         'other':request.form.get('other'),
         'img_link':request.form.get('img_link')
     })
+    return redirect(url_for('get_cities'))
+
+
+@app.route('/delete_city/<city_id>')
+def delete_city(city_id):
+    mongo.db.cities.remove({'_id': ObjectId(city_id)})
     return redirect(url_for('get_cities'))
 
 
