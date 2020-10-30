@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,500;1,200;1,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
 
-/*
-font-family: 'IBM Plex Sans', sans-serif;
-font-family: 'Abel', sans-serif;
-font-family: 'Architects Daughter', cursive;
-*/
+.btn {
+    background-color: #94A604;
+}
+
+.btn-delete {
+    background-color: #2C4001;
+}
 
 /*--------------------Nav bar------------------------*/
 
@@ -28,7 +28,8 @@ nav {
 }
 
 .nav-wrapper a {
-    color: #54595c;
+    font-family: 'Montserrat', sans-serif;
+    color: #7f7f7f;
 }
 
 .nav-items {
@@ -41,22 +42,26 @@ nav {
 /*--------------------body------------------------*/
 
 .tittle {
-    font-family: 'Abel', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
     margin-top: 55px;
+    color: #7f7f7f;
+    letter-spacing: 2px;
+    font-weight: 600;
 }
 
 .intro-questions {
     
-    color: #54595c;
-    font-family: 'Abel', sans-serif;
+    color: #7f7f7f;
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
 }
 
 .intro-text {
-    color: #54595c;
-    font-family: 'Abel', sans-serif;
+    color: #7f7f7f;
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
+    font-weight: lighter;
 }
 
 .intro-text, h6 {
@@ -82,11 +87,42 @@ nav {
     text-align: baseline;
     padding: 0px 0px;
     margin-right: 20px;
+    font-family: 'Montserrat', sans-serif;
     
 }
 
+.btn:hover {
+    color: #94A604;
+    background-color: #fff;
+}
+
+.btn-delete:hover {
+    color: #2C4001;
+}
+
 .card-title {
-    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    color: #2C4001;
+}
+
+.edit-delete-city {
+    text-align: center;
+}
+
+.activator {
+    color: #94A604;
+}
+
+.btn i {
+    color: #fff;
+}
+
+.btn i:hover {
+    color: #94A604;
+}
+
+.btn-delete i:hover {
+    color: #2C4001;
 }
 
 /*--------------------Map------------------------*/
@@ -100,28 +136,55 @@ nav {
 /*--------------------Footer------------------------*/
 
 footer {
-    background-color: #54595c;
+    background-color: #7f7f7f;
     color: #fff;
-}
-
-#form {
-    padding: 30px;
 }
 
 
 /*--------------------Add a city------------------------*/
 
 .add-tittle {
-    font-family: 'Abel', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
     margin-top: 55px;
+    color: #7f7f7f;
 }
 
 .form-add {
-    font-family: 'Abel', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
 }
 
 .button-add {
+    text-align: center;
+}
+
+.material-icons {
+    color: #2C4001;
+}
+
+
+/*--------------------Contacts------------------------*/
+
+#form {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    color: #7f7f7f;
+}
+
+.drop {
+    margin-top: 60px;
+}
+
+textarea {
+    min-height: 150px;
+}
+
+/*--------------------Search------------------------*/
+
+.search {
+    margin-top: 60px;
     text-align: center;
 }

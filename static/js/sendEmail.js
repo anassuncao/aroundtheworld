@@ -8,6 +8,7 @@ function sendMail(contactForm) {
         function(response) {
             console.log("SUCCESS", response.status, response.text);
             alert("Email sent successfully!");
+            location.reload("contacts.html"); /*To clear the form after the success message */
         },
         function(error) {
             console.log("FAIL", error);

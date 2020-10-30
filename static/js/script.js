@@ -1,3 +1,4 @@
+
 function initMap() {
             var doha = {lat: 25.204849, lng: 55.270782}
             var map = new google.maps.Map(document.getElementById("map"), {
@@ -30,7 +31,7 @@ function initMap() {
             
 
 /*Turning cities into coordenates and add them to the var locations*/
-
+/*
 var geocoder;
 var map;
 function initialize() {

@@ -19,7 +19,12 @@ mongo = PyMongo(app)
 @app.route('/')
 @app.route('/get_cities')
 def get_cities():
-    return render_template("cities.html", cities=mongo.db.cities.find())
+    return render_template('cities.html', cities=mongo.db.cities.find())
+
+
+@app.route('/contacts') 
+def contacts():
+    return render_template('contacts.html')
 
 
 @app.route('/add_city')
@@ -61,6 +66,22 @@ def update_city(city_id):
 def delete_city(city_id):
     mongo.db.cities.remove({'_id': ObjectId(city_id)})
     return redirect(url_for('get_cities'))
+
+
+@app.route('/search')
+def search():
+    return render_template('search.html')
+
+
+@app.route('/get_search')
+def get_search():
+    mongo.db.cities.create_index({
+        'city_name': "text",
+        'country_name': "text"
+    })
+    query = request.args.get('search_word')
+    results = mongo.db.cities.find({'$text': {'$search': query}})
+    return render_template('search.html', results=results)
 
 
 if __name__ == "__main__":
