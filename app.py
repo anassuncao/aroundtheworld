@@ -27,6 +27,42 @@ def contacts():
     return render_template('contacts.html')
 
 
+@app.route('/honolulu')
+def honolulu():
+    return render_template('honolulu.html')
+
+
+@app.route('/doha')
+def doha():
+    return render_template('doha.html')
+
+
+@app.route('/dubai')
+def dubai():
+    return render_template('dubai.html')
+
+
+@app.route('/newyork')
+def newyork():
+    return render_template('newyork.html')
+
+
+@app.route('/melbourne')
+def melbourne():
+    return render_template('melbourne.html')
+
+
+@app.route('/lisbon')
+def lisbon():
+    return render_template('lisbon.html')
+
+
+@app.route('/get_city/<city_id>')
+def get_city(city_id):
+    city = mongo.db.cities.find_one({'_id': ObjectId(city_id)})
+    return render_template('city.html', city=city)
+
+
 @app.route('/add_city')
 def add_city():
     return render_template('addcity.html')
