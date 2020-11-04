@@ -22,39 +22,21 @@ def get_cities():
     return render_template('cities.html', cities=mongo.db.cities.find())
 
 
+@app.route('/search')
+def search():
+    return render_template('search.html')
+
+
+@app.route('/get_search', methods=['GET', 'POST'])
+def get_search():
+    query = request.form.get('query')
+    cities = list(mongo.db.cities.find({'$text': {'$search': query}}))
+    return render_template('search.html', cities=cities)
+
+
 @app.route('/contacts') 
 def contacts():
     return render_template('contacts.html')
-
-
-@app.route('/honolulu')
-def honolulu():
-    return render_template('honolulu.html')
-
-
-@app.route('/doha')
-def doha():
-    return render_template('doha.html')
-
-
-@app.route('/dubai')
-def dubai():
-    return render_template('dubai.html')
-
-
-@app.route('/newyork')
-def newyork():
-    return render_template('newyork.html')
-
-
-@app.route('/melbourne')
-def melbourne():
-    return render_template('melbourne.html')
-
-
-@app.route('/lisbon')
-def lisbon():
-    return render_template('lisbon.html')
 
 
 @app.route('/get_city/<city_id>')
@@ -102,22 +84,6 @@ def update_city(city_id):
 def delete_city(city_id):
     mongo.db.cities.remove({'_id': ObjectId(city_id)})
     return redirect(url_for('get_cities'))
-
-
-@app.route('/search')
-def search():
-    return render_template('search.html')
-
-
-@app.route('/get_search')
-def get_search():
-    mongo.db.cities.create_index({
-        'city_name': "text",
-        'country_name': "text"
-    })
-    query = request.args.get('search_word')
-    results = mongo.db.cities.find({'$text': {'$search': query}})
-    return render_template('search.html', results=results)
 
 
 if __name__ == "__main__":

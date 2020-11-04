@@ -189,8 +189,22 @@ textarea {
     text-align: center;
 }
 
-/*--------------------Cities Pages------------------------*/
+.button-search {
+    min-width: 150px;
+    text-align: center;
+}
 
+.button-reset {
+    min-width: 150px;
+    text-align: center;
+}
+
+.buttons-container {
+    text-align: center;
+}
+
+/*--------------------Cities Pages------------------------*/
+/*
 .city-image-honolulu {
     background-image: url("/static/images/honolulu.jpg");
     min-height: 600px;
@@ -249,7 +263,7 @@ textarea {
     margin-top: 40px;
     margin-bottom: 40px;
     margin-left: 30px;
-}
+} */
 
 /*ENCONTRAR UMA SOLUÇÃO PARA QUE A IMAGEM APAREÇA BEM!*/
 .city-image {
