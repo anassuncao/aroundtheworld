@@ -39,30 +39,46 @@
     
     {% block content %}
     <div class="row container" id="city-info">
-        <div class="col m4 s12">
-            <div class="city-image">
-                <img src="{{city.img_link}}"/>
-            </div>
-        </div>
-        <div class="col m8 s12">
+        <div class="col s12">
             <div class="city-name">
                 <h4><strong>{{city.city_name}}</strong> - {{city.country_name}}</h4>
             </div>
             <div class="city-content">
-                <p>Country: {{city.country_name}}</p>
-                <p>The best: {{city.best}}</p>
-                <p>The worst: {{city.worst}}</p>
-                <p>Where to grab a bite: {{city.eat}}</p>
-                <p>Resting is important: {{city.sleep}}</p>
-                <p>Funny usefull/less stuff: {{city.other}}</p>
+                <p><strong>Country:</strong> {{city.country_name}}</p>
+                <p><strong>The best:</strong> {{city.best}}</p>
+                <p><strong>The worst:</strong> {{city.worst}}</p>
+                <p><strong>Where to grab a bite:</strong> {{city.eat}}</p>
+                <p><strong>Resting is important:</strong> {{city.sleep}}</p>
+                <p><strong>Funny usefull/less stuff:</strong> {{city.other}}</p>
             </div>
             <div class="edit-delete-city">
                 <a href="{{url_for('edit_city', city_id=city._id)}}" class="waves-effect waves-light btn btn-small">Edit <i class="material-icons">edit</i></a>
                 <a href="{{url_for('delete_city', city_id=city._id)}}" class="waves-effect waves-light btn btn-small btn-delete">Delete <i class="material-icons">delete</i></a>
             </div>
-            <a href="/#{{city.city_name}}" class="waves-effect waves-light btn btn-small btn-float"><i class="material-icons">arrow_back</i></a>
         </div>
     </div>
+    <div class="row container" id="city-photo">
+        <div class="col s12">
+            <div class="city-image">
+                <img src="{{city.img_link}}"/>
+            </div>
+        </div>
+    </div>
+    <div class="row container btn-back">
+        <a href="/#{{city.city_name}}" class="waves-effect waves-light btn btn-small btn-float">Back<i class="material-icons">arrow_back</i></a>
+    </div>
+{% endblock %}
+<footer class="row container-fluid">        
+        <div class="col s12 m4 footer-links">
+            <p><a href="#" target="_blank" class="in-logo"><i class="fab fa-instagram"></i></a>Instagram</p> 
+        </div>
+         <div class="col s12 m4 footer-links">
+            <p><a href="#" target="_blank" class="in-logo"><i class="fab fa-facebook"></i></a>Facebook</p>  
+        </div>
+        <div class="col s12 m4 footer-details">
+            <p>Made by: Ana Assunção</p>
+            <p>2020</p>
+        </div>
+    </footer>
 </body>
 </html>
-{% endblock %}

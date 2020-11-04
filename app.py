@@ -66,16 +66,16 @@ def edit_city(city_id):
 @app.route('/update_city/<city_id>', methods=['POST'])
 def update_city(city_id):
     cities = mongo.db.cities
-    cities.update({'_id': ObjectId(city_id)}, 
+    cities.update({'_id': ObjectId(city_id)},
     {
-        'city_name':request.form.get('city_name'),
-        'country_name':request.form.get('country_name'),
-        'best':request.form.get('best'),
-        'worst':request.form.get('worst'),
-        'eat':request.form.get('eat'),
-        'sleep':request.form.get('sleep'),
-        'other':request.form.get('other'),
-        'img_link':request.form.get('img_link')
+        'city_name': request.form.get('city_name'),
+        'country_name': request.form.get('country_name'),
+        'best': request.form.get('best'),
+        'worst': request.form.get('worst'),
+        'eat': request.form.get('eat'),
+        'sleep': request.form.get('sleep'),
+        'other': request.form.get('other'),
+        'img_link': request.form.get('img_link')
     })
     return redirect(url_for('get_cities'))
 

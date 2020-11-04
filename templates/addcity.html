@@ -41,6 +41,7 @@
 <div class="row">
     <div class="col s12 add-tittle">
         <h4>Add a city</h4>
+        <p><strong>Tip:</strong> Before adding a city, please use our <a href="{{ url_for('search')}}">search</a> page to make sure it doesn't exist in the website yet.</p>
     </div>
 </div>
 
@@ -97,20 +98,19 @@
     </form>
 </div>
 
- <footer>
-            <div id="footer-details" class="row">
-                <div class="col s12 m3">
-                </div>
-                <div class="col s12 m3">
-                    <h6><a href="https://www.linkedin.com/in/asaramago/" target="_blank" class="in-logo"><i class="fab fa-linkedin"></i></a>Instagram</h6> 
-                    <h6><a href="https://www.linkedin.com/in/asaramago/" target="_blank" class="in-logo"><i class="fab fa-linkedin"></i></a>Facebook</h6>  
-                </div>
-                <div class="col s12 m3">
-                    <h5><a href="#">Levina's Travel Consultancy</a></h5>
-                    <h6>Made by: Ana Assunção</h6>
-                </div>
-            </div>
+    <footer class="row container-fluid">        
+        <div class="col s12 m4 footer-links">
+            <p><a href="#" target="_blank" class="in-logo"><i class="fab fa-instagram"></i></a>Instagram</p> 
+        </div>
+         <div class="col s12 m4 footer-links">
+            <p><a href="#" target="_blank" class="in-logo"><i class="fab fa-facebook"></i></a>Facebook</p>  
+        </div>
+        <div class="col s12 m4 footer-details">
+            <p>Made by: Ana Assunção</p>
+            <p>2020</p>
+        </div>
     </footer>
+
     <script>
         $(document).ready(function() {
             $(".button-collapse").sideNav();

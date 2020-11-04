@@ -36,6 +36,7 @@
             </div>
         </nav>
     </header>
+    
     <div class="row container">
         <form action="{{url_for('get_search')}}" method="POST" class="search">
             <div class="input-field col s12">
@@ -49,9 +50,9 @@
             </div>
         </form>
     </div>
-
+{% block content %}
     <div class="row container">
-        <div class="col s12">
+        <div class="col s12 search-results">
         {% if cities|length > 0 %}
             <ul>
             {% for city in cities %}
@@ -59,22 +60,34 @@
             {% endfor %}
             </ul>
         </div>
-    </div>
-        {% else %}
-            <h4>No results found. Would you like to add it yourself? Click <a href="/add_city">here!</a></h4>
-        {% endif %}
-        
     
+        {% else %}
+            <div class="col s12 no-results">
+                <h4>No results found. Would you like to add it yourself? Click <a href="/add_city">here!</a></h4>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}
 
-   
+<footer class="row container-fluid">        
+    <div class="col s12 m4 footer-links">
+        <p><a href="#" target="_blank" class="in-logo"><i class="fab fa-instagram"></i></a>Instagram</p> 
+    </div>
+    <div class="col s12 m4 footer-links">
+        <p><a href="#" target="_blank" class="in-logo"><i class="fab fa-facebook"></i></a>Facebook</p>  
+    </div>
+    <div class="col s12 m4 footer-details">
+        <p>Made by: Ana Assunção</p>
+        <p>2020</p>
+    </div>
+</footer>    
+    
     
     <script>
         $(document).ready(function() {
             $(".button-collapse").sideNav();
         });
     </script>
-
-
 
 </body>
 </html>

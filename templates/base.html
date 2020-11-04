@@ -56,77 +56,9 @@
             <h5>Enjoy!</h5>
         </div>
     </div>
-    <!--
-    <div class="row container">
-        <div class="col l4 m6 s12">
-            <div class="card large" id="honolulu">
-                <div class="card-image waves-effect waves-block waves-light">
-                        <img src="/static/images/honolulu.jpg">
-                </div>
-                <div class="card-content">
-                    <span class="card-title"><strong>Honolulu</strong> - USA</span>
-                    <p><a class="activator" href="/honolulu">Know more</a></p>
-                </div> 
-            </div>
-        </div>
-        <div class="col l4 m6 s12">
-            <div class="card large" id="doha">
-                <div class="card-image waves-effect waves-block waves-light">
-                    <img src="/static/images/doha.jpg">
-                </div>
-                <div class="card-content">
-                    <span class="card-title"><strong>Doha</strong> - United Arab Emirates</span>
-                    <p><a class="activator" href="/doha">Know more</a></p>
-                </div>
-            </div>
-        </div>
-        <div class="col l4 m6 s12">
-            <div class="card large" id="dubai">
-                <div class="card-image waves-effect waves-block waves-light">
-                    <img src="/static/images/dubai.jpg">
-                </div>
-                <div class="card-content">
-                    <span class="card-title"><strong>Dubai</strong> - United Arab Emirates</span>
-                    <p><a class="activator" href="/dubai">Know more</a></p>
-                </div>
-            </div>
-        </div>
-        <div class="col l4 m6 s12">
-            <div class="card large" id="newyork">
-                <div class="card-image waves-effect waves-block waves-light">
-                    <img src="/static/images/newyork.jpg">
-                </div>
-                <div class="card-content">
-                    <span class="card-title"><strong>New York</strong> - USA</span>
-                    <p><a class="activator" href="/newyork">Know more</a></p>
-                </div>
-            </div>
-        </div>    
-        <div class="col l4 m6 s12">
-            <div class="card large" id="melbourne">
-                <div class="card-image waves-effect waves-block waves-light">
-                    <img src="/static/images/melbourne.jpg">
-                </div>
-                <div class="card-content">
-                    <span class="card-title"><strong>Melbourne</strong> - Australia</span>
-                    <p><a class="activator" href="/melbourne">Know more</a></p>
-                </div>
-            </div>
-        </div>
-        <div class="col l4 m6 s12">
-            <div class="card large">
-                <div class="card-image waves-effect waves-block waves-light">
-                    <img src="/static/images/lisboa.jpg">
-                </div>
-                <div class="card-content">
-                        <span class="card-title"><strong>Lisbon</strong> - Portugal</span>
-                        <p><a class="activator" href="/lisbon">Know more</a></p>
-                </div>
-            </div>
-        </div>-->
         {% block content %}
         {% endblock %}
-    </div>
+
     <div class="row container">
         <div class="col s12">
             <div id="map"></div>
@@ -134,20 +66,20 @@
     </div>
 
     
-     <footer>
-           
-                <div class="col s12 m3">
-                </div>
-                <div class="col s12 m3">
-                    <h6><a href="#" target="_blank" class="in-logo"><i class="fab fa-linkedin"></i></a>Instagram</h6> 
-                    <h6><a href="#" target="_blank" class="in-logo"><i class="fab fa-linkedin"></i></a>Facebook</h6>  
-                </div>
-                <div class="col s12 m3">
-                    <h5><a href="#">Levina's Travel Consultancy</a></h5>
-                    <h6>Made by: Ana Assunção</h6>
-                </div>
+    <footer class="row container-fluid">        
+        <div class="col s12 m4 footer-links">
+            <p><a href="#" target="_blank" class="in-logo"><i class="fab fa-instagram"></i></a>Instagram</p> 
+        </div>
+         <div class="col s12 m4 footer-links">
+            <p><a href="#" target="_blank" class="in-logo"><i class="fab fa-facebook"></i></a>Facebook</p>  
+        </div>
+        <div class="col s12 m4 footer-details">
+            <p>Made by: Ana Assunção</p>
+            <p>2020</p>
+        </div>
     </footer>
-     <script>
+    
+    <script>
         $(document).ready(function() {
             $(".button-collapse").sideNav();
         });

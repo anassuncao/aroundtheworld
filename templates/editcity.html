@@ -30,23 +30,25 @@
                     <li><a class="nav-items" href="/">Home</a></li>
                     <li><a class="nav-items" href="/add_city">Add a city</a></li>
                     <li><a class="nav-items" href="/search">Search</a></li>
+                    <li><a class="nav-items" href="/contacts">Get in touch</a></li>
                 </ul>
                 <ul id="mobile-demo" class="side-nav">
                     <li><a class="nav-items" href="/">Home</a></li>
                     <li><a class="nav-items" href="/add_city">Add a city</a></li>
                     <li><a class="nav-items" href="/search">Search</a></li>
+                    <li><a class="nav-items" href="/contacts">Get in touch</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
-<div class="row">
+<div class="row container edit-tittle">
     <div class="col s12">
         <h5>Edit city</h5>
     </div>
 </div>
 {% block content %}
-<div class="row">
+<div class="row container">
     <form action="{{ url_for('update_city', city_id=city._id) }}" method="POST" class="col s12">
         <div class="row">
             <div class="input-field col s12">
@@ -86,17 +88,36 @@
             </div>
             <div class="input-field col s12">
                 <i class="material-icons prefix">image</i>
-                <input id="sleep" name="img_link" type="url" class="validate" value="{{city.img_link}}">
+                <input id="image" name="img_link" type="url" class="validate" value="{{city.img_link}}">
                 <label for="icon_image">If you want to add a photo, paste your link here:</label>
             </div>
         </div>
-        <div class="row">
+        <div class="row button-edit">
             <button class="btn waves-effect waves-light" type="submit" name="action">Edit city
             <i class="material-icons right">edit</i>
             </button>
         </div>
     </form>
 </div>
+
+<footer class="row container-fluid">        
+    <div class="col s12 m4 footer-links">
+        <p><a href="#" target="_blank" class="in-logo"><i class="fab fa-instagram"></i></a>Instagram</p> 
+    </div>
+     <div class="col s12 m4 footer-links">
+        <p><a href="#" target="_blank" class="in-logo"><i class="fab fa-facebook"></i></a>Facebook</p>  
+    </div>
+    <div class="col s12 m4 footer-details">
+        <p>Made by: Ana Assunção</p>
+        <p>2020</p>
+    </div>
+</footer>
+
+<script>
+        $(document).ready(function() {
+            $(".button-collapse").sideNav();
+        });
+    </script>
 
 </body>
 </html>
