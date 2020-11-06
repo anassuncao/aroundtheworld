@@ -1,18 +1,18 @@
-**AROUND THE WORLD**
+## **AROUND THE WORLD**
 
 This project is a website/app with the intent to act as a "free teaser" for a Travel Consultant. The website contains free tips and information about several cities across the world and to make it more interactive and interesting for the user, it allows to add information regarding cities that he/she has visited and editing information that's already in the website. There's also the option to delete cities.
 
 The goal is that people who have fun navigating and contributing to this website would want to hire the Travel Consultant services for a more tailor made trip or even just to gather more information before making a decision about the next trip.
 
 
-**UX**
+### **UX**
 
 I believe the website is intuitive and easy to navigate. It has a few lines with instructions and information on how to use it to make the user's life easier. As mentioned before, it's possible to add, edit and delete a city. It also has a search page and a contacts page where the user can directly send an email to the travel consultant.
 
 
 **Features**
 
-When I first started this project I had an idea of how to organize it and it was based on that idea that I've created the first mockups. They can be found here: XXXXXXXXXXXXXXADICIONAR LINK PARA DROPBOXXXXXXXX
+When I first started this project I had an idea of how to organize it and it was based on that idea that I've created the first mockups. They can be found [here](https://www.dropbox.com/sh/ukmbb1fsrfvrf1g/AADSyrqA_N_bsEV41YFGrej6a?dl=0).
 
 As I was building the project I've decided to make a few changes. The changes were motivated by several reasons: improving the user experience, making the website more user friendly in general and making it more simple and organized. The final result is, therefore, a bit different of the first idea to which I made the mockup.
 
@@ -36,7 +36,7 @@ The *Get in touch* page displays a contact form that the user can fill with the 
 All the pages also display a footer with the links to the Instagram and Facebook accounts of the Travel Consultant.
 
 
-**Technologies used**
+### **Technologies used**
 
 
 - I used Materialize documentation for the grid, responsiveness, navbar, cards, icons, between others: https://materializecss.com/
@@ -55,7 +55,7 @@ All the pages also display a footer with the links to the Instagram and Facebook
 
 
 
-**Testing**
+### **Testing**
 
 I used the following for validating the html, css and javascript code.
 
@@ -76,7 +76,7 @@ For testing the email, I've filled the form and sent the email. After that I've 
 The mentioned above laptops, phones and browsers were also used to manually test the website completely.
 
 
-**Deployment**
+### **Deployment**
 
 I've published my website using GitHub pages. I followed these steps:
 
@@ -96,9 +96,14 @@ Press Enter to create your local clone.
 
 **Credits**
 
-All the images on the website were taken by my friend and Travel Consultant Levina Ferreira during her trips.
+All the images on the website were taken by my friend and Travel Consultant Levina Ferreira during her trips. Except:
+
+- Tilburg image was taken from this website: https://www.studiekeuze123.nl/steden/tilburg
+- Lisbon image was taken from here: https://www.theguardian.com/travel/2017/jul/08/lisbon-portugal-stay-hotels-food-museums-city-guide
 
 The logo was also made by a designer friend, Sérgio Filipe.
+
+falar no codigo que foi retirado do mini projecto
 
 
 **Improvements**

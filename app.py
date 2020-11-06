@@ -16,6 +16,7 @@ app.config["MONGO_URI"] = MONGO_URI
 
 mongo = PyMongo(app)
 
+
 @app.route('/')
 @app.route('/get_cities')
 def get_cities():
@@ -34,7 +35,7 @@ def get_search():
     return render_template('search.html', cities=cities)
 
 
-@app.route('/contacts') 
+@app.route('/contacts')
 def contacts():
     return render_template('contacts.html')
 

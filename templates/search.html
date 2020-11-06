@@ -37,7 +37,7 @@
         </nav>
     </header>
     
-    <div class="row container">
+    <div class="row container search">
         <form action="{{url_for('get_search')}}" method="POST" class="search">
             <div class="input-field col s12">
                 <input id="query" name="query" type="text" class="validate" required>
@@ -50,37 +50,37 @@
             </div>
         </form>
     </div>
-{% block content %}
+
     <div class="row container">
         <div class="col s12 search-results">
         {% if cities|length > 0 %}
             <ul>
             {% for city in cities %}
-                <li><a href="{{url_for('get_city', city_id=city._id)}}">{{city.city_name}} - {{city.country_name}}</a></li>
+                <li><a href="{{url_for('get_city', city_id=city._id)}}" target="_blank">{{city.city_name}} - {{city.country_name}}</a></li>
             {% endfor %}
             </ul>
         </div>
-    
-        {% else %}
             <div class="col s12 no-results">
+        {% else %}
                 <h4>No results found. Would you like to add it yourself? Click <a href="/add_city">here!</a></h4>
-            </div>
         {% endif %}
+            </div>
+        
     </div>
-{% endblock %}
 
-<footer class="row container-fluid">        
-    <div class="col s12 m4 footer-links">
-        <p><a href="#" target="_blank" class="in-logo"><i class="fab fa-instagram"></i></a>Instagram</p> 
-    </div>
-    <div class="col s12 m4 footer-links">
-        <p><a href="#" target="_blank" class="in-logo"><i class="fab fa-facebook"></i></a>Facebook</p>  
-    </div>
-    <div class="col s12 m4 footer-details">
-        <p>Made by: Ana Assunção</p>
-        <p>2020</p>
-    </div>
-</footer>    
+
+    <footer class="row container-fluid">        
+        <div class="col s12 m4 footer-links">
+            <p><a href="#" target="_blank" class="in-logo"><i class="fab fa-instagram"></i></a>Instagram</p> 
+        </div>
+        <div class="col s12 m4 footer-links">
+            <p><a href="#" target="_blank" class="in-logo"><i class="fab fa-facebook"></i></a>Facebook</p>  
+        </div>
+        <div class="col s12 m4 footer-details">
+            <p>Made by: Ana Assunção</p>
+            <p>2020</p>
+        </div>
+    </footer>    
     
     
     <script>

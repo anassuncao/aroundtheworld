@@ -19,55 +19,45 @@ function initMap() {
                 imagePath:
                 "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
             });
-            }
-            var locations = [
+
+        }
+
+        var locations = [
                 {lat: 25.204849, lng: 55.270782},
                 {lat: -37.813629, lng: 144.963058},
                 {lat: 25.285446, lng: 51.531040},
                 {lat: 40.712776, lng: -74.005974},
                 {lat: 21.306944, lng: -157.858337},
-                {lat: 38.7436214, lng: -9.1952226}
+                {lat: 38.7436214, lng: -9.1952226},
+                {lat: 51.573684, lng: 5.0036701},
+                {lat: 29.4816561, lng: -98.6544881},
+                {lat: -27.3812533, lng: 152.7130155}
             ];
 
+
             
-
-/*Turning cities into coordenates and add them to the var locations*/
 /*
-var geocoder;
-var map;
 function initialize() {
-    geocoder = new google.maps.Geocoder();
-    var latlng = new google.maps.LatLng(-34.397, 150.644);
-    var mapOptions = {
-      zoom: 8,
-      center: latlng
-    }
-    map = new google.maps.Map(document.getElementById('map'), mapOptions);
-  }
+    var geocoder = new google.maps.Geocoder();
+            document.getElementById('city_name').addEventListener('click', () => {
+                geocodeAddress(geocoder,map);
+            });
 
-  function codeAddress() {
+            locations.push(geocoder);
+            }
+    
+            
+ function codeAddress() {
     var address = document.getElementById('city_name').value;
     geocoder.geocode( { 'city_name': address}, function(results, status) {
       if (status == 'OK') {
-        locations.push(address);
+        map.setCenter(results[0].geometry.location); /* locations.push(geocoder)
+        var marker = new google.maps.Marker({
+            map: map,
+            position: results[0].geometry.location
         });
       } else {
         alert('Geocode was not successful for the following reason: ' + status);
       }
     });
-  }
-
-/* 
-  for (i = 0; i < myJSONResult.results.length; i++) {
-  myAddress[i] = myJSONResult.results[i].location;
-}
-
-  locations.push(location);
-
-<body onload="initialize()">
- <div id="map" style="width: 320px; height: 480px;"></div>
-  <div>
-    <input id="address" type="textbox" value="Sydney, NSW">
-    <input type="button" value="Encode" onclick="codeAddress()">
-  </div>
-</body>*/
+  }*/
