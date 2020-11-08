@@ -33,31 +33,3 @@ function initMap() {
                 {lat: 29.4816561, lng: -98.6544881},
                 {lat: -27.3812533, lng: 152.7130155}
             ];
-
-
-            
-/*
-function initialize() {
-    var geocoder = new google.maps.Geocoder();
-            document.getElementById('city_name').addEventListener('click', () => {
-                geocodeAddress(geocoder,map);
-            });
-
-            locations.push(geocoder);
-            }
-    
-            
- function codeAddress() {
-    var address = document.getElementById('city_name').value;
-    geocoder.geocode( { 'city_name': address}, function(results, status) {
-      if (status == 'OK') {
-        map.setCenter(results[0].geometry.location); /* locations.push(geocoder)
-        var marker = new google.maps.Marker({
-            map: map,
-            position: results[0].geometry.location
-        });
-      } else {
-        alert('Geocode was not successful for the following reason: ' + status);
-      }
-    });
-  }*/

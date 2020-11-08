@@ -16,7 +16,7 @@
 
     <title>Around the World</title>
 </head>
-<body onload= "initialize()">
+<body>
     <header>  
          <nav>
             <div class="nav-wrapper">
@@ -47,36 +47,37 @@
 
 {% block content %}
 <div class="row container">
+<!--I chose to use textareas intead of input because when displaying in smaller screens and phones the label was overlaping the line. Using textareas prevents this.-->
     <form action="{{ url_for('insert_city') }}" method="POST" class="col s12">
         <div class="row form-add">
             <div class="input-field col s12">
                 <i class="material-icons prefix">room</i>
-                <input id="city_name" name="city_name" type="text" class="validate" required>
+                <textarea id="city_name" name="city_name" type="text" class="validate materialize-textarea" required></textarea>
                 <label for="icon_city">City</label>
             </div>
             <div class="input-field col s12">
                 <i class="material-icons prefix">public</i>
-                <input id="country_name" name="country_name" type="text" class="validate" required>
+                <textarea id="country_name" name="country_name" type="text" class="validate materialize-textarea" required></textarea>
                 <label for="icon_country">Country</label>
             </div>
             <div class="input-field col s12">
                 <i class="material-icons prefix">sentiment_very_satisfied</i>
-                <input id="best" name="best" type="text" class="validate" required>
+                <textarea id="best" name="best" type="text" class="validate materialize-textarea" required></textarea>
                 <label for="icon_best">What did you like more in this city?</label>
             </div>
             <div class="input-field col s12">
                 <i class="material-icons prefix">sentiment_very_dissatisfied</i>
-                <input id="worst" name="worst" type="text" class="validate" required>
+                <textarea id="worst" name="worst" type="text" class="validate materialize-textarea" required></textarea>
                 <label for="icon_worst">What was not so good?</label>
             </div>
             <div class="input-field col s12">
                 <i class="material-icons prefix">restaurant</i>
-                <input id="eat" name="eat" type="text" class="validate" required>
+                <textarea id="eat" name="eat" type="text" class="validate materialize-textarea" required></textarea>
                 <label for="icon_eat">Where did you have your best meal in this city?</label>
             </div>
             <div class="input-field col s12">
                 <i class="material-icons prefix">hotel</i>
-                <input id="sleep" name="sleep" type="text" class="validate" required>
+                <textarea id="sleep" name="sleep" type="text" class="validate materialize-textarea" required></textarea>
                 <label for="icon_sleep">Where did you have a good night sleep?</label>
             </div>
             <div class="input-field col s12">
@@ -86,12 +87,12 @@
             </div>
             <div class="input-field col s12">
                 <i class="material-icons prefix">image</i>
-                <input id="photo" name="img_link" type="url" class="validate">
+                <textarea id="photo" name="img_link" type="url" class="validate materialize-textarea"></textarea>
                 <label for="icon_image">If you want to add a photo, paste your link here:</label>
             </div>
         </div>
         <div class="row container col s12 button-add">
-            <button class="btn waves-effect waves-light" type="submit button" name="action" value="Encode" onclick="codeAddress()">Add city
+            <button class="btn waves-effect waves-light" type="submit button" name="action" value="Encode">Add city
             <i class="material-icons right">playlist_add</i>
             </button>
         </div>
@@ -100,10 +101,10 @@
 
     <footer class="row container-fluid">        
         <div class="col s12 m4 footer-links">
-            <p><a href="#" target="_blank" class="in-logo"><i class="fab fa-instagram"></i></a>Instagram</p> 
+            <p><a href="https://www.instagram.com/levinaferreira/" target="_blank" class="in-logo"><i class="fab fa-instagram"></i></a>Instagram</p> 
         </div>
          <div class="col s12 m4 footer-links">
-            <p><a href="#" target="_blank" class="in-logo"><i class="fab fa-facebook"></i></a>Facebook</p>  
+            <p><a href="https://www.facebook.com/levina.ferreira" target="_blank" class="in-logo"><i class="fab fa-facebook"></i></a>Facebook</p>  
         </div>
         <div class="col s12 m4 footer-details">
             <p>Made by: Ana Assunção</p>

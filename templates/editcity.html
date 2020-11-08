@@ -49,46 +49,47 @@
 </div>
 {% block content %}
 <div class="row container">
+<!--I chose to use textareas intead of input because when displaying in smaller screens and phones the label was overlaping the line. Using textareas prevents this.-->
     <form action="{{ url_for('update_city', city_id=city._id) }}" method="POST" class="col s12">
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">room</i>
-                <input id="city_name" name="city_name" type="text" class="validate" value="{{city.city_name}}">
+                <textarea id="city_name" name="city_name" type="text" class="validate materialize-textarea" required>{{city.city_name}}</textarea>
                 <label for="icon_city">City</label>
             </div>
             <div class="input-field col s12">
                 <i class="material-icons prefix">public</i>
-                <input id="country_name" name="country_name" type="text" class="validate" required value="{{city.country_name}}">
+                <textarea id="country_name" name="country_name" type="text" class="validate materialize-textarea" required>{{city.country_name}}</textarea>
                 <label for="icon_country">Country</label>
             </div>
             <div class="input-field col s12">
                 <i class="material-icons prefix">sentiment_very_satisfied</i>
-                <input id="best" name="best" type="text" class="validate" required value="{{city.best}}">
+                <textarea id="best" name="best" type="text" class="validate materialize-textarea" required>{{city.best}}</textarea>
                 <label for="icon_best">What did you like more in this city?</label>
             </div>
             <div class="input-field col s12">
                 <i class="material-icons prefix">sentiment_very_dissatisfied</i>
-                <input id="worst" name="worst" type="text" class="validate" required value="{{city.worst}}">
+                <textarea id="worst" name="worst" type="text" class="validate materialize-textarea" required>{{city.worst}}</textarea>
                 <label for="icon_worst">What was not so good?</label>
             </div>
             <div class="input-field col s12">
                 <i class="material-icons prefix">restaurant</i>
-                <input id="eat" name="eat" type="text" class="validate" required value="{{city.eat}}">
+                <textarea id="eat" name="eat" type="text" class="validate materialize-textarea" required>{{city.eat}}</textarea>
                 <label for="icon_eat">Where did you have your best meal in this city?</label>
             </div>
             <div class="input-field col s12">
                 <i class="material-icons prefix">hotel</i>
-                <input id="sleep" name="sleep" type="text" class="validate" required value="{{city.sleep}}">
+                <textarea id="sleep" name="sleep" type="text" class="validate materialize-textarea" required>{{city.sleep}}</textarea>
                 <label for="icon_sleep">Where did you have a good night sleep?</label>
             </div>
             <div class="input-field col s12">
                 <i class="material-icons prefix">rate_review</i>
-                <textarea id="other" name="other" class="materialize-textarea" value="{{city.other}}"></textarea>
+                <textarea id="other" name="other" class="materialize-textarea">{{city.other}}</textarea>
                 <label for="icon_other">Do you have any tips and tricks to go around this city?</label>
             </div>
             <div class="input-field col s12">
                 <i class="material-icons prefix">image</i>
-                <input id="image" name="img_link" type="url" class="validate" value="{{city.img_link}}">
+                <textarea id="image" name="img_link" type="text" class="validate materialize-textarea">{{city.img_link}}</textarea>
                 <label for="icon_image">If you want to add a photo, paste your link here:</label>
             </div>
         </div>
@@ -96,16 +97,19 @@
             <button class="btn waves-effect waves-light" type="submit" name="action">Edit city
             <i class="material-icons right">edit</i>
             </button>
+            <a href="/" class="btn waves-effect waves-light">Cancel
+            <i class="material-icons right">cancel</i>
+            </a>
         </div>
     </form>
 </div>
 
 <footer class="row container-fluid">        
     <div class="col s12 m4 footer-links">
-        <p><a href="#" target="_blank" class="in-logo"><i class="fab fa-instagram"></i></a>Instagram</p> 
+        <p><a href="https://www.instagram.com/levinaferreira/" target="_blank" class="in-logo"><i class="fab fa-instagram"></i></a>Instagram</p> 
     </div>
      <div class="col s12 m4 footer-links">
-        <p><a href="#" target="_blank" class="in-logo"><i class="fab fa-facebook"></i></a>Facebook</p>  
+        <p><a href="https://www.facebook.com/levina.ferreira" target="_blank" class="in-logo"><i class="fab fa-facebook"></i></a>Facebook</p>  
     </div>
     <div class="col s12 m4 footer-details">
         <p>Made by: Ana Assunção</p>

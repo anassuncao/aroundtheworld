@@ -60,20 +60,21 @@
     <div class="row container" id="city-photo">
         <div class="col s12">
             <div class="city-image">
-                <img src="{{city.img_link}}"/>
+                <img src="{{city.img_link}}" alt="{{city.img_link}}"/>
             </div>
         </div>
     </div>
+    <!--The followng button allows the user to get back to the landing page, specifically to the city he/she was seeing.-->
     <div class="row container btn-back">
         <a href="/#{{city.city_name}}" class="waves-effect waves-light btn btn-small btn-float">Back<i class="material-icons">arrow_back</i></a>
     </div>
 {% endblock %}
 <footer class="row container-fluid">        
         <div class="col s12 m4 footer-links">
-            <p><a href="#" target="_blank" class="in-logo"><i class="fab fa-instagram"></i></a>Instagram</p> 
+            <p><a href="https://www.instagram.com/levinaferreira/" target="_blank" class="in-logo"><i class="fab fa-instagram"></i></a>Instagram</p> 
         </div>
          <div class="col s12 m4 footer-links">
-            <p><a href="#" target="_blank" class="in-logo"><i class="fab fa-facebook"></i></a>Facebook</p>  
+            <p><a href="https://www.facebook.com/levina.ferreira" target="_blank" class="in-logo"><i class="fab fa-facebook"></i></a>Facebook</p>  
         </div>
         <div class="col s12 m4 footer-details">
             <p>Made by: Ana Assunção</p>
