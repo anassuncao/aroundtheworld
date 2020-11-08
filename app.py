@@ -80,19 +80,6 @@ def update_city(city_id):
     })
     return redirect(url_for('get_cities'))
 
-"""
-@app.route('/update_coordinates/<city_id>', methods=['POST'])
-def update_coordinates(city_id):
-    the_city = mongo.db.cities.find_one({'_id': ObjectId(city_id)})
-    #CALL TO THE API - FUNCITON TO Call a URL
-    cities = mongo.db.cities
-    cities.update({'_id': ObjectId(city_id)},
-    {
-        'city_lat': request.form.get(''),
-        'city_lng': request.form.get(''),
-    })
-    return redirect(url_for('get_cities'))"""
-
 
 @app.route('/delete_city/<city_id>')
 def delete_city(city_id):
@@ -103,5 +90,4 @@ def delete_city(city_id):
 if __name__ == "__main__":
     app.run(host=os.environ.get('IP'),
         port=int(os.environ.get('PORT')),
-        debug=True)
-    #DO NOT FORGET TO SET THIS TO FALSE IN THE END OF THE PROJECT
+        debug=False)
