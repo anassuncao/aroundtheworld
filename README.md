@@ -82,6 +82,15 @@ The manual testing, with the mentioned computers and phones was made by navigati
 I've published my website/app using Heroku. I followed these steps:
 
 1. After making sure I have a requirements.txt file and a Procfile I have followed the documentation available on Heroku.
+2. I've added, commited and pushed my files to heroku master
+3. Entering the Settings page, I've set the IP and the PORT values.
+
+Deploy your application
+Commit your code to the repository and deploy it to Heroku using Git.
+
+$ git add .
+$ git commit -am "make it better"
+$ git push heroku master
 
 
 **Credits**
