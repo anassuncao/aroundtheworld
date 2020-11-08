@@ -82,8 +82,14 @@ The manual testing, with the mentioned computers and phones was made by navigati
 I've published my website/app using Heroku. I followed these steps:
 
 1. After making sure I have a requirements.txt file and a Procfile I have followed the documentation available on Heroku.
-2. I've added, commited and pushed my files to heroku master
-3. Entering the Settings page, I've set the IP and the PORT values.
+2. I've added, commited and pushed my files to heroku master:
+    $ git add .
+    $ git commit -am "make it better"
+    $ git push heroku master)
+3. Entering the Settings page, on the Confir Vars section I've set the IP (0.0.0.0) and the PORT (5000) values. Also the MONGO_URI link and credentials.
+4. I've restarted all dynos
+5. Run app - all was working properly.
+6. Made another add and commit to add these last updates on the README-md file regarding the deployment procedure.
 
 Deploy your application
 Commit your code to the repository and deploy it to Heroku using Git.
